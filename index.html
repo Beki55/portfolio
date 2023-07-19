@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👁️ Beiki 👁️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="tab_box">
+            <button class="tab_btn active">HOME</button>
+            <button class="tab_btn">ABOUT ME</button>
+            <button class="tab_btn">CONTACT</button>
+            <button class="tab_btn">MORE INFO</button>
+
+        </div>
+        <div class="content_box">
+            <div class="content active">
+                 <h2>Home</h2>
+                 <div class="car">
+                 <p>
+                  <img src="IMG_20210709_144510.jpg" class="home-image">
+                  
+                  <b>Bereket Melese Ambaye</b> <br>
+                  Department Of Software Engineering <br>
+                  Seconed Year student at BDU <br>
+                  ID BDU1405511
+                 </p>
+                </div>
+            </div>
+            <div class="content">
+              <h2>About me</h2>
+              <div class="card">
+                <div>
+              <p>
+                I am a software engineering student at Bahir Dar University. 
+                I was born in October 18 1995 at BAHIRDAR ETHIOPIA , 
+                kindly since from my childhood I usually play a game with mobile phones and also laptops. 
+                I think this is the most important thing that inspire me to study my university degree based on this kind of thing,
+                 that is software engineering. 
+                 When I was in high school I want my future job that will able to work on remotely and needs some kind of problem solving, 
+                 so software engineering is the right thing.<br> 
+
+                 
+              </p>
+            </div>
+            >
+        </div>
+         </div>
+
+         <div class="content">
+          <h2>Contact me</h2>
+         
+      <div class="card">
+          <img src="bereket.jpg" class="profile-img">
+          <div class="info">
+               <h1>BEREKET MELESE AMBAYE</h1>
+               
+                <p>
+                   <img src="th (1).jpeg" class="tele">
+                   @msbeiki
+                </p>
+                <p class="phone">
+                  <img src="th.jpeg" class="tele">
+                 0974512450
+                </p>
+                <p class="linkedin">
+                    <img src="linked.png" class="tele">
+                    Bereket Melese
+                </p>
+                <p>
+                    <img src="twit.png" class="tele">
+                    @msbeikis
+                 </p>
+                <p class="email">
+                  <img src="th (2).jpeg" class="tele">
+                   Bereket21bnm@gmail.com
+                </p>
+                
+               <div class="links">
+               
+                <a href="mailto:Bereket21bnm@gmail.comc:\Users\hp\Desktop\New folder\k\New folder\yoseph-main\th (1).jpeg c:\Users\hp\Desktop\New folder\k\New folder\yoseph-main\th (2).jpeg c:\Users\hp\Desktop\New folder\k\New folder\yoseph-main\th.jpeg"  target="_blank"><button class="b">send email</button></a>
+
+              </div>
+          </div>
+
+
+      </div>
+      
+     </div>
+     <div class="content">
+<h2>MORE info</h2>
+<div>
+    By clicking the download button below.You can access all the<br>
+                    Necessary details of my academic transcript<br>
+    <a href="bk.docx"  download ><button class="a">Download acadamic profile</button></a>
+</div>
+     </div>
+        </div>
+      </div>
+      
+
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabButtons = document.querySelectorAll('.tab_btn');
+        const allContent = document.querySelectorAll('.content');
+
+        tabButtons.forEach((tab, index) => {
+            tab.addEventListener('click', (e) => {
+                tabButtons.forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                tab.classList.add('active');
+
+                allContent.forEach(content => {
+                    content.classList.remove('active');
+                });
+                allContent[index].classList.add('active');
+
+                var line = document.querySelector('.line');
+                line.style.width = e.target.offsetWidth + "px";
+                line.style.left = e.target.offsetLeft + "px";
+
+                allContent.forEach(content => {
+                    content.classList.remove('active');
+                });
+                allContent[index].classList.add('active');
+            });
+        });
+    });
+</script>        
+</html>
