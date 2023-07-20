@@ -5,6 +5,10 @@
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
 }
+@media screen and (max-width: 768px) {
+  /* Styles for devices with a maximum width of 768px (e.g., mobile phones) */
+  /* Adjust layout, font sizes, and other design elements */
+}
 
 body{
     display: flex;
