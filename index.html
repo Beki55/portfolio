@@ -104,33 +104,5 @@
 
     </div>
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const tabButtons = document.querySelectorAll('.tab_btn');
-        const allContent = document.querySelectorAll('.content');
 
-        tabButtons.forEach((tab, index) => {
-            tab.addEventListener('click', (e) => {
-                tabButtons.forEach(tab => {
-                    tab.classList.remove('active');
-                });
-                tab.classList.add('active');
-
-                allContent.forEach(content => {
-                    content.classList.remove('active');
-                });
-                allContent[index].classList.add('active');
-
-                var line = document.querySelector('.line');
-                line.style.width = e.target.offsetWidth + "px";
-                line.style.left = e.target.offsetLeft + "px";
-
-                allContent.forEach(content => {
-                    content.classList.remove('active');
-                });
-                allContent[index].classList.add('active');
-            });
-        });
-    });
-</script>        
 </html>
